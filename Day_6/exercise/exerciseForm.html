@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <h1>Enter your information here:</h1>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Name</th><th><input type="text" name="n1" autocomplete="off" placeholder="Enter your full name"></th>
+                </tr>
+                <tr>
+                    <th>Password</th><th><input type="password" name="n2" autocomplete="off" placeholder="Enter your password"></th></th>
+                </tr>
+                <tr>
+                    <th>Gender</th><th><input type="radio" id="male" name="gender"><label for="male">Male</label><input type="radio" id="female" name="gender"><label for="female">Female</label></th></th>
+                </tr>
+                <tr>
+                    <th>Skills</th><th><input type="checkbox" id="java" name="skills"><label for="java">Java</label><input type="checkbox" id="python" name="skills"><label for="python">Python</label>
+                        <input type="checkbox" id="cplusplus" name="skills"><label for="cplusplus">C++</label><input type="checkbox" id="html" name="skills"><label for="html">HTML</label></th>
+                </tr>
+                <tr>
+                    <th>Qualifications</th><th><select name="quals" id="quals">
+                        <option value="high School">High School</option>
+                        <option value="university">University</option>
+                        <option value="masters">Masters</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Date of Birth</th><th><input type="date" name="date"></th>
+                </tr>
+                <tr>
+                    <th><input type="submit" value="Register"></th><th><input type="submit" value="Reset"></th>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

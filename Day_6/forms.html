@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+</head>
+<body>
+    <h2>Simple HTML Forms</h2>
+    <!--POST should be used for login so you are not sending 
+    sensitive stuff in URL-->
+    <form> 
+        <label>
+            Enter Name: <input type="text" name="n1" autocomplete="off" placeholder="Your full name here"/>
+        </label> <br/>
+        <!--Number type means you can only type numbers-->
+        <label>
+            Enter Age: <input type="number" name="n2" placeholder="Enter your age"/>
+        </label>
+        <br/>
+        <label>
+            Enter date: <input type="date" name="n3"/>
+        </label>
+        <br/>
+        <input type="submit" value="Login"/>
+    </form>
+</body>
+</html>
