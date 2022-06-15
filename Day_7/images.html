@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Image Example</title>
+    <style>
+        .smallImage {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event handling in Javascript</h2>
+    <div>
+        <img src="imgs/bunny.png" width="400px" height="400px" id="main">
+    </div>
+    <div onclick="changeImage(event)">
+        <img src="imgs/bunny.png" class="smallImage" alt="Bunny"/>
+        <img src="imgs/catmove.gif" class="smallImage" alt="Cat Move"/>
+        <img src="imgs/dogswim.gif" class="smallImage" alt="Dog Swim"/>
+        <img src="imgs/duck.png" class="smallImage" alt="Duck">
+        <img src="imgs/duckmove.gif" class="smallImage" alt="Duck move"/>
+        <img src="imgs/goosewalk.gif" class="smallImage" alt="Goose Walk"/>
+    </div> 
+    <script type="text/javascript">
+        function changeImage(e) {
+            let mainImage = document.getElementById('main');
+            let target = e.target;
+            if(target.tagName == "IMG"){
+                mainImage.src = target.src;
+            }
+            //console.log(e.target.tagName);
+            //console.log(e.target.src); only workd on imgs not divs
+
+            
+        }
+    </script>
+</body>
+</html>

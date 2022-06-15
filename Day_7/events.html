@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events JS Practice</title>
+</head>
+<body>
+    <h1>JS Demo on Events</h1>
+    <input type="text" id = "i1"></input>
+    <button onClick="handleClick(event)">My Button</button>
+    <p onclick="handleClick(event)">My paragraph</p>
+    <div id="i2">Name is: </div>
+
+    
+    <button onClick="handleClick2()">Change Colour</button>
+    <div>
+        <button onclick="addColor('red')">Red</button>
+        <button onclick="addColor('green')">Green</button>
+        <button onclick="addColor('blue')">Blue</button>
+    </div>
+    <div id="i3">Hello World</div>
+
+    <script type="text/javascript">
+        function handleClick(e) {
+            console.log(e);
+            console.log(e.target);
+            let ele = document.getElementById("i1");
+            console.log(ele.value); //gets value from text box
+
+            if(ele.value === "") {
+                console.log("Empty String");
+            }
+
+            let ele2 = document.getElementById('i2');
+            //element has many properties and functions
+            ele2.innerHTML = ele2.innerHTML + '<b>'+ele.value+'!!!!</b>'; //add HTML inside the element
+        }
+        function handleClick2(){
+            let ele = document.getElementById('i3');
+            ele.style.color = 'red';
+
+        }
+        function addColor(c) {
+            let ele = document.getElementById('i3');
+            ele.style.color = c;
+        }
+    </script>
+</body>
+</html>

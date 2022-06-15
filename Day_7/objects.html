@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects Examples</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let user1 = {name: "Barrett", age: 20};
+        document.write('<p> Name = '+user1.name+', Age = '+user1.age+'</p>');
+
+        function Person(name, age) {
+            //this is used to declare properties for Person objects
+            this.name = name;
+            this.age = age;
+            //this.name and this.age declares two properties which are initiailized by two parameters
+        }
+
+        let user2 = new Person('Devynn', 21);
+        document.write('<p> Name = '+user2.name+', Age = '+user2.age+'</p>');
+    </script>
+</body>
+</html>

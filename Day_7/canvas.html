@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Canvas Example </title>
+    <style>
+        .smallImage {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c1" style="border: 2px solid black" width="400px" height="400px"></canvas>
+    <script type="text/javascript">
+        //getContent('2d')
+        let ctx = document.getElementById('c1').getContext('2d');
+        // fillrect(x, y, w, h)
+        ctx.fillRect(50, 50, 50, 50);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(100, 100, 50, 50);
+        ctx.beginPath();
+        //arc(x, y, r, start. end, true/false)
+        ctx.arc(200, 200, 25, 0, Math.PI, true); //Math.PI means 180 degrees
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(200, 200, 20, 0, Math.PI, true); //true or false is for clockwise or counterclockwise
+        ctx.fillStyle = 'pink';
+        ctx.fill();
+    </script>
+
+</body>
+</html>

@@ -14,6 +14,18 @@
         document.write('<h3> Name = '+firstname+', Age = '+age+'</h3>');
         //simplest way to join strings without using + operator
         //Go to console for JS error debug
+        
+        //why we should not use var example
+        for (var v = 0; v < 10; v++) {
+            var x = 2;
+            if((v % x) == 0) {
+                window.document.write('<p> v = '+v+'</p>');
+            }
+        }
+        //able to access variables from inside code block
+        document.write('<p> value of window.x = '+window.x+'</p>');
+        //in the above code var should be replaced with let and const respectively
+        
     </script>
 </body>
 </html>

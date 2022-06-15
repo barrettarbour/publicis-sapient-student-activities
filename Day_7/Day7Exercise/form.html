@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Enter your information here:</h1>
+    <form name="login" method="post" action="../imgs/bunny.png" onsubmit=" return handleSubmit()">
+        <table>
+            <tbody>
+                <tr>
+                    <th>First Name</th><th><input type="text" name="n1" autocomplete="off" placeholder="Enter your full name"></th>
+                </tr>
+                <tr>
+                    <th>Last Name</th><th><input type="text" name="n2" autocomplete="off" placeholder="Enter your full name"></th>
+                </tr>
+                <tr>
+                    <th>Password</th><th><input type="password" name="p1" autocomplete="off" placeholder="Enter your password"></th></th>
+                </tr>
+                <tr>
+                    <th>Confirm Password</th><th><input type="password" name="p2" autocomplete="off" placeholder="Enter your password"></th></th>
+                </tr>
+                <tr>
+                    <th>Gender</th><th><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label><input type="radio" id="female" name="gender" value="female"><label for="female">Female</label></th></th>
+                </tr>
+                <tr>
+                    <th>Skills</th><th>
+                        <input type="checkbox" id="java" name="skills">
+                        <label for="java">Java</label>
+                        <input type="checkbox" id="python" name="skills">
+                        <label for="python">Python</label>
+                        <input type="checkbox" id="cplusplus" name="skills">
+                        <label for="cplusplus">C++</label>
+                        <input type="checkbox" id="html" name="skills">
+                        <label for="html">HTML</label></th>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="confirm" value="Submit"></th>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+        function handleSubmit() {
+            let loginForm = document.login;
+            let fname = loginForm.n1;
+            let lname = loginForm.n2;
+            let pass = loginForm.p1;
+            let confirmpass = loginForm.p2;
+            let gend = loginForm.gender;
+            let skills = loginForm.skills;
+     
+
+            if(fname.value.length < 3) {
+                alert('First Name is empty!');
+                return false;
+            }
+            if(lname.value.length < 3) {
+                alert('Last Name is empty!');
+                return false;
+            }
+            if(pass.value.length <= 0 ) {
+                alert('Password is empty!');
+                return false;
+            }
+            if(confirmpass.value.length <= 0) {
+                alert('Confirm password is empty!');
+                return false;
+            }
+            if(pass.value != confirmpass.value) {
+                alert('Passwords do not match!');
+                return false;
+            }
+            if(gend.value.length <=0) {
+                console.log(gend.value.length);
+                alert('No gender selected!');
+                return false;
+            }
+            if(!skills[0].checked && !skills[1].checked && !skills[2].checked && !skills[3].checked) {
+                alert('No skills selected!');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
